@@ -1,29 +1,30 @@
-
-
-  .cube {
+   .cube {
     position:relative;
     padding-bottom:20%;
     transform-style: preserve-3d;
+    
     /* transform-origin: 50% 50%;
     transform:rotateY(90deg) rotateX(0);
-    transition:transform 3s; */
-  }
+    transition:transform 3s;  */
+  } 
   .cubeFace {
     position: absolute;
     left:50%;top:0;
     width: 20%;height:100%;
     margin: 0 auto;
     transform-style: inherit;
-    background: red;
+    background: black;
     box-shadow:inset 0 0 0 3px #dad2d2; 
     transform-origin:50% 50%;
     transform: rotateX(90deg);
+    /* transform: rotateY('45deg'); */
     backface-visibility:hidden;
   }
   .face2{
     transform-origin:50% 50%;
     transform: rotatez(90deg) translateX(100%) rotateY(90deg);
   }
+
   .cubeFace:before, .cubeFace:after {
     content: '';
     position: absolute;
@@ -41,8 +42,27 @@
   .cubeFace:after {
     top: 0; left: 100%;
     transform: rotateY(90deg);
-  }
+  } 
   
   /* body:hover .cube{
     transform:rotateY(405deg) rotateX(360deg);
   } */
+
+  /* .cube {
+    position:relative;
+    padding-bottom:20%;
+    transform-style: preserve-3d;
+}
+
+.cubeFace {
+    position: absolute;
+    left:50%;top:0;
+    width: 20%;height:100%;
+    margin: 0 auto;
+    transform-style: inherit;
+    background-size: cover; 
+    backface-visibility:hidden;
+    display: block;
+    position: absolute;
+} */
+

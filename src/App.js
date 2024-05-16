@@ -1,11 +1,8 @@
 import './App.css';
+import BeginDialog from './BeginDialog';
 import Game from './Game';
-import React from 'react';
-
-
 
 function App() {
-  
   return (<>
     <div className="text-center bg-black h-screen sm:h-4/5 font-quicksand font-semibold">
       {/* <header className="App-header">
@@ -22,8 +19,8 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <BeginDialog/>
       
-      <Game/>
     </div>
   </>
   );

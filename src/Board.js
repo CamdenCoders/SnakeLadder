@@ -2,7 +2,6 @@ import Person from './Person';
 import Ladder from './Ladder';
 import { playerContext, ladderContext } from './Game';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
 import { useState, useEffect, useContext } from 'react';
 
 

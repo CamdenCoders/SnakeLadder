@@ -13,45 +13,44 @@ export default function Dice({onDiceClick, number}){
     const diceRef = useContext(diceRefContext);
     const imageRef = useContext(imageRefContext);
     let image;
-    console.log(number);
+    // console.log(number);
     switch(number)
     {
-case 1: image = one; break;
-case 2: image = two; break;
-case 3: image = three; break;
-case 4: image = four; break;
-case 5: image = five; break;
-case 6: image = six; break;
-default: image = red;
+        case 1: image = one; break;
+        case 2: image = two; break;
+        case 3: image = three; break;
+        case 4: image = four; break;
+        case 5: image = five; break;
+        case 6: image = six; break;
+        default: image = red;
     }
-
     return (
-        
-        // <div id="diceRoll" className=" text-black cursor-pointer grid translate-x-3/4 sm:translate-x-28 sm:absolute sm:top-1/3 sm:right-1/4 justify-center place-content-center w-16 h-16 border-1 border-red-500 p-5 rounded-lg" onClick={onDiceClick}>
-        //         <p className='font-unbounded text-center text-white text-4xl mt-3 font-bold'>
-        //         {number}
-        //         </p>   
-
-                
-        // </div>
         <>
-        
         <div ref = {diceRef} onClick={onDiceClick} className="cube">
             <div className="cubeFace">{
             number && (
                 <img src={image} ref={imageRef} onClick={onDiceClick} className={`border-red-500`} />
             )
-        }</div>
+            }
+            </div>
             <div className="cubeFace face2">{
-            number && (
-                <img src={image} ref={imageRef} onClick={onDiceClick} className={`transition-opacity duration-1000 opacity-0 border-red-500`} />
+            (
+                <img src={six} ref={imageRef} onClick={onDiceClick} className={`transition-opacity duration-1000 opacity-0 border-red-500`} />
             )
-        }</div>
-        </div> 
-        
-        {/* <p className='font-unbounded mt-3 font-bold text-3xl text-white absolute top-28 right-60 mr-1'>{number}</p>
-        absolute w-[70px] h-[70px] top-28 right-60 -mr-5 */}
-        </>
+            }
+            </div>
+        </div>
+
+        {/* <div ref = {diceRef} onClick={onDiceClick}  class="dice">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+        </div> */}
+
+    </>
     );
 }
 
